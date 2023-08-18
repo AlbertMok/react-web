@@ -1,0 +1,17 @@
+.bottom-info {
+  color: #888;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  a {
+    color: #888;
+    text-decoration: none;
+  }
+
+  span {
+    margin: 0 3px;
+  }
+
+  box-shadow: 5px 2px 5px #a6a9ad;
+}
