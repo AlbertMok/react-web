@@ -21,11 +21,10 @@
     "noFallthroughCasesInSwitch": true,
 
     /* Alias */
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"],
+    "composite": true,
+      "baseUrl": ".",
+     "paths": {
+        "@/*": ["./src/*"]
+      },
     }
-  },
-  "include": [ "src/*", "src/**/*.tsx", "src/**/*.jsx", "src/**/*.ts", "src/**/*.js" ],
-  "references": [{ "path": "./tsconfig.node.json" }]
 }

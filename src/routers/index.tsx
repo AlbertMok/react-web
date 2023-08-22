@@ -1,9 +1,9 @@
-import { createBrowserRouter } from "react-router-dom";
+import { RouteObject, createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import Page from "../pages";
 import About from "@/pages/About";
 
-const router = createBrowserRouter([
+const routes: RouteObject[] = [
   {
     path: "/",
     element: <App />,
@@ -16,18 +16,8 @@ const router = createBrowserRouter([
     path: "/about",
     element: <About />,
   },
-]);
+];
 
-// function createBrowserRouter(
-//   routes: RouteObject[],
-//
-//   opts?: {
-//     basename?: string;
-//     future?: FutureConfig;
-//     hydrationData?: HydrationState;
-//     window?: Window;
-//   }
-//
-// ): RemixRouter;
+const router = createBrowserRouter(routes);
 
 export default router;

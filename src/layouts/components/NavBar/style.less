@@ -1,0 +1,86 @@
+@media screen and (min-width: 768px) {
+  .navbar {
+    display: flex;
+    box-shadow: var(--box-shadow);
+    align-items: center;
+    justify-content: center;
+    min-height: var(--navbar-height);
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+  }
+}
+
+.nav-main {
+  position: relative;
+  left: 2rem;
+  width: max-content;
+  // flex: 1;
+}
+
+.nav-main-ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none; /* 移除列表项的标记 */
+  padding: 0; /* 移除默认的内边距 */
+  box-sizing: border-box;
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.nav-button > .route-link {
+  box-sizing: border-box;
+  width: 100%; /* 填充整个按钮宽度 */
+  height: 100%; /* 填充整个按钮高度 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: black;
+  padding: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--box-shadow);
+    max-height: var(--navbar-height);
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+  }
+
+  .navbar.open {
+    max-height: 500px;
+  }
+
+  .nav-main-ul {
+    display: flex;
+    flex-flow: column wrap;
+  }
+  .expand-button {
+    display: block;
+    cursor: pointer;
+    background: none;
+    border: none;
+    block-size: 30px;
+    box-sizing: border-box;
+  }
+}
+.nav-edge {
+  display: flex;
+  align-items: center;
+  order: -1;
+  min-height: var(--navbar-height);
+}
+
+.icon-container {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease-in-out;
+}
