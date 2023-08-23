@@ -1,9 +1,17 @@
-import "./App.css";
+import { ConfigProvider } from 'antd';
+import './App.css';
+import { Suspense } from 'react';
+import { RouterProvider } from 'react-router-dom';
+import router from './routers';
+import { Loading } from './components/Loading';
 
-import React from "react";
-
-const App: React.FC = () => {
-  return <>Hello World</>;
-};
-
+function App() {
+  return (
+    <ConfigProvider>
+      <Suspense fallback={<Loading />}>
+        <RouterProvider router={router} />
+      </Suspense>
+    </ConfigProvider>
+  );
+}
 export default App;

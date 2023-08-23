@@ -1,14 +1,15 @@
-import "./style.scss";
-import React from "react";
-import { RouterProvider } from "react-router-dom";
-import router from "@/routers";
+import { Suspense } from 'react';
+import './style.less';
+import { Outlet } from 'react-router-dom';
+import { Loading } from '@/components/Loading';
+
 const AppMain = () => {
   return (
     <>
       <div className="app-main">
-        <React.StrictMode>
-          <RouterProvider router={router} />
-        </React.StrictMode>
+        <Suspense fallback={<Loading />}>
+          <Outlet />
+        </Suspense>
       </div>
     </>
   );
