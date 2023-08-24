@@ -3,35 +3,37 @@ import Page from '../pages';
 import About from '@/pages/About';
 import Home from '@/pages/Home';
 import Layout from '@/layouts';
-
-type RouteItem = RouteObject & {
-  meta: {
-    title: string;
-  };
-};
+import { Empty } from 'antd';
 
 const routes: RouteObject[] = [
   {
     path: '/',
     element: <Layout />,
-    id: 'base',
     children: [
       {
-        path: '/',
+        path: '/page',
         element: <Page />,
         id: 'page'
       },
       {
-        path: '/',
+        path: '/home',
         element: <Home />,
         id: 'home'
       },
       {
-        path: '/',
+        path: '/about',
         element: <About />,
         id: 'about'
       }
     ]
+  },
+  {
+    path: '*',
+    element: (
+      <div className="empty">
+        <Empty />
+      </div>
+    )
   }
 ];
 

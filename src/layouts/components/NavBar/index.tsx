@@ -5,16 +5,22 @@ import { routes } from '@/routers';
 import { RouteObject } from 'react-router-dom';
 import { CloseOutlined, MenuOutlined } from '@ant-design/icons';
 
-const NavItemList = (routes: RouteObject[]) => {
-  const NavItems = routes.map((route) => (
+function NavItems(routes: RouteObject[]) {
+  let routeList: RouteObject[] = [];
+
+  // 将子路由放入新的路由组里面
+  routes.map((route) => {
+    route.children?.map((route) => routeList.push(route));
+  });
+
+  const NavItems_ = routeList.map((route) => (
     <li key={route.id}>
-      <button className="nav-button">
-        <NavItem path={route.path as string} name={route.id} />
-      </button>
+      <NavItem path={route.path as string} name={route.id} />
     </li>
   ));
-  return <ul className="nav-main-ul">{NavItems}</ul>;
-};
+
+  return <ul>{NavItems_}</ul>;
+}
 
 function NavBar() {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -27,7 +33,7 @@ function NavBar() {
     <div>
       <div className={drawerOpen ? 'navbar open' : 'navbar'}>
         {/* 主体 */}
-        <div className="nav-main">{NavItemList(routes)}</div>
+        <div className="nav-main">{NavItems(routes)}</div>
 
         {/* 边缘部分 */}
         <div className="nav-edge">
