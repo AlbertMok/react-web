@@ -11,8 +11,6 @@
 }
 
 .nav-main {
-  position: relative;
-  left: 2rem;
   width: max-content;
   // flex: 1;
 }
@@ -44,6 +42,10 @@
   padding: 0.5rem;
 }
 
+.expand-button {
+  display: none;
+}
+
 @media screen and (max-width: 768px) {
   .navbar {
     display: flex;
@@ -62,6 +64,7 @@
     display: flex;
     flex-flow: column wrap;
   }
+
   .expand-button {
     display: block;
     cursor: pointer;
@@ -71,16 +74,10 @@
     box-sizing: border-box;
   }
 }
+
 .nav-edge {
   display: flex;
   align-items: center;
   order: -1;
   min-height: var(--navbar-height);
-}
-
-.icon-container {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  transition: transform 0.3s ease-in-out;
 }

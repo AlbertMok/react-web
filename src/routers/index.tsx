@@ -4,31 +4,37 @@ import About from '@/pages/About';
 import Home from '@/pages/Home';
 import Layout from '@/layouts';
 
-export const routes: RouteObject[] = [
+type RouteItem = RouteObject & {
+  meta: {
+    title: string;
+  };
+};
+
+const routes: RouteObject[] = [
   {
     path: '/',
     element: <Layout />,
-    id: '1',
+    id: 'base',
     children: [
       {
         path: '/',
-        id: 'home',
-        element: <Home />
+        element: <Page />,
+        id: 'page'
+      },
+      {
+        path: '/',
+        element: <Home />,
+        id: 'home'
+      },
+      {
+        path: '/',
+        element: <About />,
+        id: 'about'
       }
     ]
-  },
-  {
-    id: 'page',
-    path: '/page',
-    element: <Page />
-  },
-  {
-    id: 'about',
-    path: '/about',
-    element: <About />
   }
 ];
 
 const router = createBrowserRouter(routes);
 
-export default router;
+export { routes, router };
