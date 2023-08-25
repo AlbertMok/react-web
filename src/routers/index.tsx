@@ -3,32 +3,40 @@ import Page from '../pages';
 import About from '@/pages/About';
 import Home from '@/pages/Home';
 import Layout from '@/layouts';
+import { Empty } from 'antd';
 
-export const routes: RouteObject[] = [
+const routes: RouteObject[] = [
   {
     path: '/',
     element: <Layout />,
-    id: '1',
     children: [
       {
-        path: '/',
-        id: 'home',
-        element: <Home />
+        path: '/page',
+        element: <Page />,
+        id: 'page'
+      },
+      {
+        path: '/home',
+        element: <Home />,
+        id: 'home'
+      },
+      {
+        path: '/about',
+        element: <About />,
+        id: 'about'
       }
     ]
   },
   {
-    id: 'page',
-    path: '/page',
-    element: <Page />
-  },
-  {
-    id: 'about',
-    path: '/about',
-    element: <About />
+    path: '*',
+    element: (
+      <div className="empty">
+        <Empty />
+      </div>
+    )
   }
 ];
 
 const router = createBrowserRouter(routes);
 
-export default router;
+export { routes, router };

@@ -1,9 +1,9 @@
 import { ConfigProvider } from 'antd';
 import './App.css';
 import { Suspense } from 'react';
-import { RouterProvider } from 'react-router-dom';
-import router from './routers';
 import { Loading } from './components/Loading';
+import { RouterProvider } from 'react-router-dom';
+import { router } from './routers';
 
 function App() {
   return (
