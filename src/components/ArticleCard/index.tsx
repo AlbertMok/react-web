@@ -1,10 +1,19 @@
-import './style.less';
+import './style.scss';
 
-function ArticleCard() {
+interface ArticleCardProps {
+  title: string;
+  cover: string;
+  content: string;
+}
+
+function ArticleCard({ cover, title, content }: ArticleCardProps) {
   return (
     <div className="article-card">
-      <div className="cover">图片</div>
-      <div className="description">文字描述</div>
+      <div className="cover">{cover}</div>
+      <div className="description">
+        <h1>{title}</h1>
+        <p>{content}</p>
+      </div>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import Card from '@/components/Card';
 import ArticleCard from '@/components/ArticleCard';
-import './style.less';
+import './style.scss';
 
 function Articles() {
   return (
@@ -12,12 +12,7 @@ function Articles() {
           </div>
         </div>
         <div className="articles-wrapper">
-          <ArticleCard />
-          <ArticleCard />
-          <ArticleCard />
-          <ArticleCard />
-          <ArticleCard /> <ArticleCard /> <ArticleCard /> <ArticleCard /> <ArticleCard /> <ArticleCard />
-          <ArticleCard /> <ArticleCard />
+          <ArticleCard title="adoj" content="saodijqwoijfoiwqnfiqwofqj" cover="" />
         </div>
       </div>
     </div>

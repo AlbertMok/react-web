@@ -1,4 +1,4 @@
-import './style.less';
+import './style.scss';
 
 function Card() {
   return (
