@@ -4,6 +4,7 @@ import About from '@/pages/About';
 import Home from '@/pages/Home';
 import Layout from '@/layouts';
 import { Empty } from 'antd';
+import Articles from '@/pages/articles';
 
 const routes: RouteObject[] = [
   {
@@ -24,6 +25,11 @@ const routes: RouteObject[] = [
         path: '/about',
         element: <About />,
         id: 'about'
+      },
+      {
+        path: '/articles',
+        element: <Articles />,
+        id: 'articles'
       }
     ]
   },

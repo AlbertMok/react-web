@@ -5,6 +5,7 @@ import { routes } from '@/routers';
 import { RouteObject } from 'react-router-dom';
 import { CloseOutlined, MenuOutlined } from '@ant-design/icons';
 
+// 路由导航组件
 function NavItems(routes: RouteObject[]) {
   let routeList: RouteObject[] = [];
 
@@ -19,9 +20,10 @@ function NavItems(routes: RouteObject[]) {
     </li>
   ));
 
-  return <ul>{NavItems_}</ul>;
+  return <ul className="nav-main-ul">{NavItems_}</ul>;
 }
 
+// 导航栏
 function NavBar() {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
@@ -30,19 +32,17 @@ function NavBar() {
   };
 
   return (
-    <div>
-      <div className={drawerOpen ? 'navbar open' : 'navbar'}>
-        {/* 主体 */}
-        <div className="nav-main">{NavItems(routes)}</div>
+    <div className={drawerOpen ? 'navbar open' : 'navbar'}>
+      {/* 主体 */}
+      <div className="nav-main">{NavItems(routes)}</div>
 
-        {/* 边缘部分 */}
-        <div className="nav-edge">
-          <button className="expand-button" onClick={handleClick}>
-            <span>
-              {!drawerOpen ? <MenuOutlined style={{ fontSize: 20 }} /> : <CloseOutlined style={{ fontSize: 20 }} />}
-            </span>
-          </button>
-        </div>
+      {/* 边缘部分 */}
+      <div className="nav-edge">
+        <button className="expand-button" onClick={handleClick}>
+          <span>
+            {!drawerOpen ? <MenuOutlined style={{ fontSize: 20 }} /> : <CloseOutlined style={{ fontSize: 20 }} />}
+          </span>
+        </button>
       </div>
     </div>
   );

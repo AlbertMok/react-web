@@ -1,0 +1,30 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  block-size: 100%;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: var(--box-shadow);
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  position: relative;
+  top: -40%;
+  transition: transform 0.3s;
+}
+
+.avatar:hover {
+  // transform: translate(0%, -5px);
+  transform: scale(0);
+}

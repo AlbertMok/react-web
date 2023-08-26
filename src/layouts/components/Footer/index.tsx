@@ -1,7 +1,7 @@
-import './style.less';
+import './style.scss';
 function Footer() {
   return (
-    <div className="bottom-info">
+    <div className="bottom-info clearfix">
       <span>Powered by</span>
       <span>
         <a href="#">莫明枫</a>
