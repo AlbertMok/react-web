@@ -7,11 +7,11 @@ interface NavItemProps {
 
 function NavItem({ path, name }: NavItemProps) {
   return (
-    <div className="nav-item">
+    <>
       <NavLink className="route-text" to={path}>
-        {name}
+        {({ isActive }) => <span className={isActive ? 'nav-item active' : 'nav-item'}> {name}</span>}
       </NavLink>
-    </div>
+    </>
   );
 }
 

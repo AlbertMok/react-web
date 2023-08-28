@@ -1,7 +1,19 @@
+$width_: max-content;
+
 .nav-item {
-  display: block;
-  background-color: aqua;
-  block-size: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  block-size: 40px;
+  width: max-content;
+  box-sizing: content-box;
+  border-radius: 7px;
+  padding: 0 10px;
+}
+
+.nav-item:hover,
+.nav-item.active {
+  background-color: rgba(0, 128, 255, 4);
 }
 
 .route-text {

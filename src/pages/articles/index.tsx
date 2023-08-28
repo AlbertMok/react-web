@@ -9,7 +9,11 @@ const articles: Article[] = [
   { title: 'sadi', content: 'Adasoijdqowij' },
   { title: 'sadi', content: 'Adasoijdqowij' },
   { title: 'sadi', content: 'Adasoijdqowij' },
-  { title: 'sadi', content: 'Adasoijdqowij' }
+  { title: 'sadi', content: 'Adasoijdqowij' },
+  { title: 'sadi', content: 'Adasoijdqowij' },
+  { title: 'sadi', content: 'Adasoijdqowij' },
+  { title: 'asdqw', content: 'Adasoijdqowij' },
+  { title: 'saddqwqwfqwi', content: 'Adasoijdqowij' }
 ];
 
 // 文章卡片列表
@@ -33,7 +37,8 @@ function Articles() {
           {/* <ArticleCard title="adoj" content="saodijqwoijfoiwqnfiqwofqj" cover="" /> */}
           {articleList()}
         </div>
-      </div>
+      </div>{' '}
+      <div className="publicize">dqwodihwqoif</div>
     </div>
   );
 }
