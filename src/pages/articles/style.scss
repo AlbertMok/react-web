@@ -7,7 +7,9 @@
 }
 
 .left-side {
-  display: block;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .info-card {

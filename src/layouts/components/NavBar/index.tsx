@@ -15,12 +15,16 @@ function NavItems(routes: RouteObject[]) {
   });
 
   const NavItems_ = routeList.map((route) => (
-    <li key={route.id}>
+    <div key={route.id} style={{ flex: 1, height: '100%' }}>
       <NavItem path={route.path as string} name={route.id} />
-    </li>
+    </div>
   ));
 
-  return <ul className="nav-main-ul">{NavItems_}</ul>;
+  return (
+    <div className="nav-main-ul" style={{ flex: 1, height: '100%' }}>
+      {NavItems_}
+    </div>
+  );
 }
 
 // 导航栏
