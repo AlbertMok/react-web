@@ -1,4 +1,4 @@
-import './style.less';
+import './style.scss';
 import { useState } from 'react';
 import NavItem from './components/NavItem/NavItem';
 import { routes } from '@/routers';
