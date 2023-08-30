@@ -22,9 +22,9 @@
 
     /* Alias */
     "composite": true,
-      "baseUrl": ".",
-     "paths": {
-        "@/*": ["./src/*"]
-      },
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
     }
+  }
 }

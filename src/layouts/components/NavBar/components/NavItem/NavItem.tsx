@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-
+import './style.scss';
 interface NavItemProps {
   path: string;
   name: string | undefined;
@@ -9,7 +9,7 @@ function NavItem({ path, name }: NavItemProps) {
   return (
     <>
       <NavLink className="route-text" to={path}>
-        {name}
+        {({ isActive }) => <span className={isActive ? 'nav-item active' : 'nav-item'}> {name}</span>}
       </NavLink>
     </>
   );

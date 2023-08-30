@@ -4,7 +4,6 @@
   align-items: center;
   justify-content: center;
   min-height: 60px;
-
   a {
     color: #888;
     text-decoration: none;
@@ -15,4 +14,12 @@
   }
 
   box-shadow: 5px 2px 5px #a6a9ad;
+}
+
+.clearfix {
+  &::after {
+    display: block;
+    content: '';
+    clear: both;
+  }
 }

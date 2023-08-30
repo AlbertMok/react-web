@@ -1,0 +1,20 @@
+.article-card {
+  display: flex;
+  width: 60vw;
+  height: 250px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: var(--box-shadow);
+}
+
+.cover {
+  display: block;
+  min-width: 45%;
+  block-size: 100%;
+  background-color: aqua;
+  border-radius: inherit;
+}
+
+.description {
+  width: 100%;
+}
