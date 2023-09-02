@@ -8,13 +8,9 @@
 
 .left-side {
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
-}
-
-.info-card {
-  position: relative;
-  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .articles-wrapper {

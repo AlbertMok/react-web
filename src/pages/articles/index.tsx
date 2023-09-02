@@ -30,9 +30,12 @@ function Articles() {
   return (
     <div className="container">
       <div className="wrapper-main">
+        {/* 左侧个人信息栏和其他栏目 */}
         <div className="left-side">
           <Card />
         </div>
+
+        {/* 文章栏目 */}
         <div className="articles-wrapper">
           {/* <ArticleCard title="adoj" content="saodijqwoijfoiwqnfiqwofqj" cover="" /> */}
           {articleList()}

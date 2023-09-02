@@ -43,4 +43,5 @@ function NavItems(routes: RouteObject[]) {
 
   return <>{NavItems_}</>;
 }
+
 export default NavBar;

@@ -1,12 +1,4 @@
 @import './variable.css';
-// Mixin itself
-@mixin clearfix {
-  &::after {
-    display: block;
-    content: '';
-    clear: both;
-  }
-}
 
 .loading {
   display: flex;
@@ -54,9 +46,19 @@ body {
   max-width: 100%;
   height: 100%;
   flex: 1;
+  transition: transform 0.3s ease-in-out;
 }
 
 .container {
   width: 100%;
   height: 100%;
+  max-width: 100%;
+}
+
+@mixin clearfix {
+  &::after {
+    display: block;
+    content: '';
+    clear: both;
+  }
 }

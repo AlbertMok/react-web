@@ -1,10 +1,13 @@
 import { RouteObject, createBrowserRouter } from 'react-router-dom';
+import { Empty } from 'antd';
+
 import Page from '../pages';
 import About from '@/pages/About';
 import Home from '@/pages/Home';
 import Layout from '@/layouts';
-import { Empty } from 'antd';
+
 import Articles from '@/pages/articles';
+import Writing from '@/pages/Writing';
 
 const routes: RouteObject[] = [
   {
@@ -30,6 +33,11 @@ const routes: RouteObject[] = [
         path: '/articles',
         element: <Articles />,
         id: 'articles'
+      },
+      {
+        element: <Writing />,
+        path: '/writing',
+        id: 'writing'
       }
     ]
   },
