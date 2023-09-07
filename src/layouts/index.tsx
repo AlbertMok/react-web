@@ -6,6 +6,7 @@ function Layout() {
   return (
     <div className="app-wrapper">
       <NavBar />
+      {/* 主要 */}
       <AppMain />
       <Footer />
     </div>
